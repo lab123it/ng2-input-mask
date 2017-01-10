@@ -1,0 +1,40 @@
+{
+  "name": "ng2-mask",
+  "version": "0.0.1",
+  "description": "Mask for Angular 2 Apps",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -p src -w",
+    "build": "rm -rf lib && tsc -p src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lab123ti/ng2-mask.git"
+  },
+  "keywords": [
+    "Mask",
+    "Angular",
+    "2"    
+  ],
+  "author": "jean.pierre@lab123.com.br",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lab123ti/ng2-mask/issues"
+  },
+  "homepage": "https://github.com/lab123ti/ng2-mask#readme",
+  "devDependencies": {
+    "typescript": "^1.7.5"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js":"^0.6.12",
+    "jquery": "^2.2.4",
+    "jquery-mask-plugin": "^1.14.8"
+  }
+}

@@ -1,1 +1,1 @@
-exports.MaskDirective = require('./src/MaskDirective').MaskDirective;
+exports.Ng2InputMaskModule = require('./module/ng2-input-mask.module').Ng2InputMaskModule;

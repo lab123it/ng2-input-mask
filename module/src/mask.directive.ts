@@ -17,7 +17,7 @@ export class MaskDirective {
   @Input('mask') pattern: string;
 
   constructor(private el: ElementRef, private zone: NgZone, private control: NgControl,
-  private maskService: MaskService) {
+    private maskService: MaskService) {
 
     $.jMaskGlobals = {
       translation: {
@@ -31,14 +31,21 @@ export class MaskDirective {
     };
   }
 
-  ngOnInit() {
-    console.log(this.pattern);
+  ngOnInit() {}
+
+  private getPattern(pattern) :string {
+    let rule = this.toCamelCase('get ' + this.pattern);
+    if (rule in this.maskService) {
+      pattern = this.maskService[rule]();
+    }
+    return pattern;
   }
 
   ngAfterContentInit() {
+
     this.zone.run(() => {
 
-      $(this.el.nativeElement).mask(this.pattern, this.options);
+      $(this.el.nativeElement).mask(this.getPattern(this.pattern), this.options);
 
       if (this.control.control) {
         this.control.control.setValue(this.el.nativeElement.value);
@@ -52,8 +59,8 @@ export class MaskDirective {
   }
 
   ngOnChanges(changes) {
-    if (typeof(changes.pattern.previousValue) === 'string') {
-      $(this.el.nativeElement).mask(changes.pattern.currentValue, this.options);
+    if (typeof (changes.pattern.previousValue) === 'string') {
+      $(this.el.nativeElement).mask(this.getPattern(changes.pattern.currentValue), this.options);
     }
   }
 
@@ -64,6 +71,13 @@ export class MaskDirective {
         this.control.control.setValue(this.el.nativeElement.value);
       }
 
+    });
+  }
+
+  private toCamelCase(text): string {
+    return text.replace(/^([A-Z])|\s(\w)/g, function (match, p1, p2, offset) {
+      if (p2) return p2.toUpperCase();
+      return p1.toLowerCase();
     });
   }
 

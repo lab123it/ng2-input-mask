@@ -1,6 +1,6 @@
 {
-  "name": "ng2-mask",
-  "version": "0.0.1",
+  "name": "ng2-input-mask",
+  "version": "0.0.6",
   "description": "Mask for Angular 2 Apps",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lab123ti/ng2-mask.git"
+    "url": "git+https://github.com/lab123it/ng2-input-mask.git"
   },
   "keywords": [
     "Mask",
@@ -19,21 +19,21 @@
   "author": "jean.pierre@lab123.com.br",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lab123ti/ng2-mask/issues"
+    "url": "https://github.com/lab123it/ng2-input-mask/issues"
   },
-  "homepage": "https://github.com/lab123ti/ng2-mask#readme",
+  "homepage": "https://github.com/lab123it/ng2-input-mask#readme",
   "devDependencies": {
     "typescript": "^1.7.5"
   },
   "dependencies": {
-    "@angular/common": "2.0.0-rc.1",
-    "@angular/compiler": "2.0.0-rc.1",
-    "@angular/core": "2.0.0-rc.1",
-    "@angular/http": "2.0.0-rc.1",
-    "@angular/platform-browser": "2.0.0-rc.1",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
-    "rxjs": "5.0.0-beta.6",
-    "zone.js":"^0.6.12",
+    "@angular/common": "2.2.1",
+    "@angular/compiler": "2.2.1",
+    "@angular/core": "2.2.1",
+    "@angular/forms": "2.2.1",
+    "@angular/platform-browser": "2.2.1",
+    "@angular/platform-browser-dynamic": "2.2.1",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.23",
     "jquery": "^2.2.4",
     "jquery-mask-plugin": "^1.14.8"
   }

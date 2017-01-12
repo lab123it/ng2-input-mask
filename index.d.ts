@@ -1,1 +1,1 @@
-export * from './src/MaskDirective';
+export * from './module/ng2-input-mask.module';

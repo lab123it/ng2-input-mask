@@ -33,12 +33,12 @@ Import jquery.mask
 
 # Mask Types
 
-    date: '00/00/0000'
-    time: '00:00:00'
-    dateTime: '00/00/0000 00:00:00'
+    brDate: '00/00/0000'
+    brTime: '00:00:00'
+    brDateTime: '00/00/0000 00:00:00'
     cep: '00000-000'
-    landlinePhone: '(00) 0000-0000'
-    cellPhone: '(00) 00000-0000'
+    brLandlinePhone: '(00) 0000-0000'
+    brCellPhone: '(00) 00000-0000'
     phoneUs: '(000) 000-0000'
     mixed: 'AAA 000-S0S'
     cpf: '000.000.000-00'
@@ -47,6 +47,19 @@ Import jquery.mask
     money2: "#.##0,00"
     ipAddress: '099.099.099.099'
     percent: '##0,00%'
+    
+By default, you can define your own rule by following a list below:
+
+	'0': { pattern: /\d/ },
+	'9': { pattern: /\d/, optional: true },
+	'#': { pattern: /\d/, recursive: true },
+	'A': { pattern: /[a-zA-Z0-9]/ },
+	'S': { pattern: /[a-zA-Z]/ },
+	'Y': { pattern: /[0-9]/ }
+	
+Example:
+
+	<input [mask]="'(000) 900-0000'" type="text" formControlName="myControl">
 
 ## Changelog
 

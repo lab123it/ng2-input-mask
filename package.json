@@ -1,6 +1,6 @@
 {
   "name": "ng2-input-mask",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Mask for Angular 2 Apps",
   "main": "index.js",
   "scripts": {

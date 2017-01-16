@@ -3,13 +3,13 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class MaskService {
 
-  private date = '00/00/0000';
-  private time = '00:00:00';
-  private dateTime = '00/00/0000 00:00:00';
+  private brDate = '00/00/0000';
+  private brTime = '00:00:00';
+  private brDateTime = '00/00/0000 00:00:00';
   private cep = '00000-000';
-  private landlinePhone = '(00) 0000-0000';
-  private cellPhone = '(00) 00000-0000';
-  private phoneUs = '(000) 000-0000';
+  private brLandlinePhone = '(00) 0000-0000';
+  private brCellPhone = '(00) 00000-0000';
+  private usPhone = '(000) 000-0000';
   private mixed = 'AAA 000-S0S';
   private cpf = '000.000.000-00';
   private cnpj = '00.000.000/0000-00';
@@ -20,32 +20,32 @@ export class MaskService {
 
   constructor() { }
 
-  getDate(): string {
-    return this.date;
+  getBrDate(): string {
+    return this.brDate;
   }
 
-  getTime(): string {
-    return this.time;
+  getBrTime(): string {
+    return this.brTime;
   }
 
-  getDateTime(): string {
-    return this.dateTime;
+  getBrDateTime(): string {
+    return this.brDateTime;
   }
 
   getCep(): string {
     return this.cep;
   }
 
-  getLandlinePhone(): string {
-    return this.landlinePhone;
+  getBrLandlinePhone(): string {
+    return this.brLandlinePhone;
   }
 
-  getCellPhone(): string {
-    return this.cellPhone;
+  getBrCellPhone(): string {
+    return this.brCellPhone;
   }
 
-  getPhoneUs(): string {
-    return this.phoneUs;
+  getUsPhone(): string {
+    return this.usPhone;
   }
 
   getMixed(): string {

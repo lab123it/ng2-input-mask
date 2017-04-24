@@ -61,6 +61,12 @@ Example:
 
 	<input [mask]="'(000) 900-0000'" type="text" formControlName="myControl">
 
+The masks will only be set on view. If You want to keep them on the model value, you must use the option `[keepMask]="true"`
+Example:
+```html
+    <input [mask]="'(000) 900-0000'" [keepMask]="true" type="text" formControlName="myControl">
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
